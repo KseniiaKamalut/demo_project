@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdbase
+    password: test
+    username: test
+  jpa:
+    show-sql: true #false
+    properties:
+      hibernate:
+          ddl-auto: create-drop
+          #hbm2ddl: create-drop
+          format_sql: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
+server:
+    port: 8088
+logging:
+  level:
+    #root: debug
+    org.hibernate:
+    SQL: debug #error
+    type.descriptor.sql.BasicBinder: trace #error
